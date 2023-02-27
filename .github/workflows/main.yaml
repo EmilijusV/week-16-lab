@@ -59,7 +59,7 @@ jobs:
       - name: audit npm
         working-directory: app
         run: |
-          npm audit
+          npm test
 
       # TODO: add cloudformation linting
 
