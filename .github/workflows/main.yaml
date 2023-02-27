@@ -56,7 +56,7 @@ jobs:
           npm audit
 
       # TODO: add unit testing
-      - name: audit npm
+      - name: test
         working-directory: app
         run: |
           npm test
