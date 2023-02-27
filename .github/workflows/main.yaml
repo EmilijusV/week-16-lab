@@ -50,11 +50,25 @@ jobs:
           npm run lint
 
       # TODO: add supply chain scanning
+      name: GitHub Actions Demo
+      run-name: ${{ github.actor }} is testing out
+      on: [push]
+      jobs:
+        Explore-GitHub-Actions:
+          runs-on: ubuntu-latest
+          steps:
+            - uses: actions/checkout@v3
+            - name: test
+              run: (cd app && npm audit)
+            - run: echo "Done"
 
       # TODO: add unit testing
 
+
       # TODO: add cloudformation linting
 
+
       # TODO: add deployment to cloudformation
+
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
