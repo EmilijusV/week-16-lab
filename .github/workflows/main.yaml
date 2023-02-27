@@ -54,7 +54,7 @@ jobs:
         working-directory: app
         continue-on-error: true
         run: |
-          npm audit && npm audit fix
+          npm audit && npm audit fix --force
 
       # TODO: add unit testing
       - name: test
